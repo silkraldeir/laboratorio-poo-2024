@@ -1,0 +1,22 @@
+@startuml
+
+abstract class Empleado {
+  -nombre : String
+  -salarioBase : double
+  +calcularSalario() : double
+}
+
+Empleado <|-- EmpleadoTiempoCompleto
+Empleado <|-- EmpleadoPorComision
+
+class EmpleadoTiempoCompleto {
+  -horasTrabajadas : double
+  +calcularSalario() : double
+}
+
+class EmpleadoPorComision {
+  -ventasTotales : double
+  +calcularSalario() : double
+}
+
+@enduml

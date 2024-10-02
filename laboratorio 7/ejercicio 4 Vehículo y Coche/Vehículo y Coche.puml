@@ -1,0 +1,15 @@
+@startuml
+
+class Vehiculo {
+  -marca : String
+  +Vehiculo(String)
+}
+
+class Coche {
+  -numPuertas : int
+  +Coche(String, int)
+}
+
+Vehiculo <|-- Coche
+
+@enduml

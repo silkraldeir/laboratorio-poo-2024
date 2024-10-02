@@ -1,0 +1,15 @@
+@startuml
+
+class Persona {
+  +saludar() : void
+}
+
+class Estudiante {
+  -nombre: String
+  +saludar() : void
+  +saludar(String nombrePersona) : void
+}
+
+Persona <|-- Estudiante
+
+@enduml

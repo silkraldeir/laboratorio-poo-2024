@@ -1,0 +1,21 @@
+@startuml
+
+class CuentaBancaria {
+  -saldo : double
+  +CuentaBancaria(double)
+  +retirar(double) : void
+  +getSaldo() : double
+}
+
+class CuentaCorriente {
+  -limiteSobregiro : double
+  +CuentaCorriente(double, double)
+  +retirar(double) : void
+}
+
+CuentaBancaria <|-- CuentaCorriente
+
+class SaldoInsuficienteException
+class LimiteSobregiroExcedidoException
+
+@enduml
